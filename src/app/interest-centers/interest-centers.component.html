@@ -1,0 +1,13 @@
+<div class="box">
+	<h4>Centres d'intérêt</h4>
+	@for(hobby of hobbies; track hobby.name){
+	<div>
+		<h5>{{hobby?.name}} :</h5>
+		<ul>
+			@for(desc of hobby?.descriptions; track desc.description.indexOf){
+			<li>{{desc.description}}</li>
+			}
+		</ul>
+	</div>
+	}
+</div>

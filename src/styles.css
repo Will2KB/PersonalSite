@@ -1,0 +1,130 @@
+:root {
+	--title-color: rgb(192, 0, 0);
+	--subTitle-color: rgb(242, 242, 242);
+	--main-color: rgb(244, 115, 60);
+	--border-radius: 20px;
+	--gradient-main-color: -webkit-linear-gradient(135deg, rgb(244, 115, 60), rgb(248, 191, 107));
+	--gradient-orange: linear-gradient(135deg, rgb(244, 115, 60), rgb(247, 164, 90), rgb(248, 187, 105), rgb(247, 164, 90), rgb(244, 115, 60));
+	--minHeight: 95%;
+}
+
+html {
+	height: var(--minHeight);
+}
+
+body {
+	height: var(--minHeight);
+}
+
+.body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*	justify-content: flex-start;*/
+	justify-content: center;
+	background: var(--gradient-orange);
+	padding: 10px;
+	min-height: 500px;
+}
+
+.app-person {
+	max-width: 300px;
+	margin-right: 10px;
+}
+
+h1 {
+	color: var(--title-color);
+	font-size: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	font-variant: small-caps;
+	text-shadow: rgb(255 255 255) 1px 2px 3px;
+}
+
+h2 {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+h3 {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+h4 {
+	color: var(--title-color);
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-variant: small-caps;
+}
+
+h5 {
+	color: var(--main-color);
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: unset;
+	margin-top: 15px;
+}
+
+h6 {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: unset;
+	margin-bottom: 10px;
+}
+
+.box {
+	background-color: white;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	box-shadow: rgb(0, 0, 0, 0.37) 0 8px 32px 0;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: var(--border-radius);
+	border: 1px solid rgb(255, 255, 255, 0.18);
+}
+
+.glassBlock {
+	background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+.topBottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 30px;
+	width: 100%;
+	background-color: white;
+	box-sizing: border-box;
+	padding: 5px;
+	background-color: rgb(0, 0, 0);
+	color: white;
+}
+
+.hideTopBottom {
+	display: none;
+}
+
+.centralDiv {
+	max-width: 800px;
+	/*margin-left:25%;*/
+}
+
+.subInfo {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.citation {
+	text-align: center;
+	font-family: Lucida Handwriting;
+}

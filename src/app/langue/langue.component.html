@@ -1,0 +1,10 @@
+<div class="box">
+	<h4>Langues</h4>
+	<div id="langues">
+		@for(langue of langues; track langue.name){
+		<div>
+			<h5>{{langue?.name}} :</h5> {{langue?.level}}
+		</div>
+		}
+	</div>
+</div>

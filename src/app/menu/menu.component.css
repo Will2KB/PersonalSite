@@ -1,0 +1,76 @@
+/* Sidenav menu */
+.sidenav {
+	height: 100%;
+	width: 20em;
+	max-width: 80%;
+	z-index: 10002;
+	-moz-transform: translateX(20em);
+	-webkit-transform: translateX(20em);
+	-ms-transform: translateX(20em);
+	transform: translateX(20em);
+	-moz-transition: -moz-transform 0.5s ease;
+	-webkit-transition: -webkit-transform 0.5s ease;
+	-ms-transition: -ms-transform 0.5s ease;
+	transition: transform 0.5s ease;
+	-webkit-overflow-scrolling: touch;
+	overflow-y: auto;
+	top: 0;
+	right: 0;
+	background-color: var(--main-color);
+	padding-top: 60px;
+	position: fixed;
+}
+
+/* Sidenav menu links */
+.sidenav button {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: rgb(255, 255, 255);
+	display: block;
+	transition: 0.3s;
+	background-color: transparent;
+	box-sizing: border-box;
+	border: none;
+	cursor: pointer;
+}
+
+.sidenav button:hover {
+	color: #111;
+}
+
+.sidenav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+	-moz-transform: translateX(0);
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+}
+
+/* Close btn */
+.sidenav .close {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+/* Icône burger */
+.burger-icon {
+	cursor: pointer;
+}
+
+.burger-icon span {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: var(--gradient-main-color);
+	margin: 4px 0;
+}

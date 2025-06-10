@@ -1,0 +1,12 @@
+.body{
+	background: url('/assets/LogoWilliamBaroni2.png') no-repeat fixed 100%;
+}
+.title {
+	background: linear-gradient(135deg,rgb(247,164,90), rgb(248, 187, 105), rgb(247,164,90));
+	backdrop-filter: blur(2px);
+	border: 1px solid rgb(255, 255, 255, 0.18);
+	box-sizing: border-box;
+	box-shadow: rgb(0, 0, 0) 4px 4px 20px;
+	border-radius: var(--border-radius);
+	padding:5px;	
+}

@@ -1,0 +1,8 @@
+#langues{
+	display:flex;
+	flex-direction: column;
+}
+
+#langues h5{
+	display: contents;
+}

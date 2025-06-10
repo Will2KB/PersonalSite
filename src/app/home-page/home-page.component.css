@@ -1,0 +1,126 @@
+#bodyHomePage {
+	background-image: -moz-linear-gradient(top, rgb(255, 255, 255, 0.3), rgba(0, 0, 0, 0.6)), url('/assets/IMG_4400.JPG');
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255, 0.3), rgba(0, 0, 0, 0.6)), url('/assets/IMG_4400.JPG');
+	background-image: -ms-linear-gradient(top, rgb(255, 255, 255, 0.3), rgba(0, 0, 0, 0.6)), url('/assets/IMG_4400.JPG');
+	background-image: linear-gradient(top, rgb(255, 255, 255, 0.3), rgba(0, 0, 0, 0.6)), url('/assets/IMG_4400.JPG');
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-moz-transition: opacity 0.5s ease;
+	-webkit-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	opacity: 1;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+#homePageMenu {
+	display: flex;
+	float: inline-end;
+	margin-right: 10px;
+}
+
+#banner {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	cursor: default;
+	height: 100vh;
+	min-height: 35em;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+
+#banner #nameTitle{
+	width: 400px;	
+}
+
+#banner img {
+	width: 250px;
+	align-self: center;
+}
+
+#banner h1 {
+	background: var(--gradient-main-color);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	text-shadow: none;
+	margin: 0;
+}
+
+#banner h5 {
+	font-size: 20px;
+}
+
+#banner p {
+	color: white;
+	font-size: 20px;
+	margin: 5px;
+}
+
+#banner button.visibleButton {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: white;
+	margin: 10px;
+	font-variant: small-caps;
+	text-decoration: none;
+	background: var(--gradient-main-color);
+	box-sizing: border-box;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: var(--border-radius);
+	width: 150px;
+	align-self: center;
+}
+
+#banner button.visibleButton:hover {
+	color: var(--title-color);
+	text-decoration: underline;
+}
+
+#banner button.link {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	height:250px;
+}
+
+#banner button.link img{
+	position:absolute;
+}
+#banner button.link .exploded {
+	opacity: 1;
+}
+
+#banner button.link .joined {
+	opacity:0;
+}
+
+#banner button.link:hover .joined {
+	opacity: 1;
+}
+
+#banner button.link:hover .exploded {
+	opacity: 0;
+}
+
+#banner p.author {
+	font-size: 14px;
+}

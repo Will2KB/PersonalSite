@@ -1,0 +1,30 @@
+#personDiv {
+	/*width: 20%;
+	float: left;
+	margin: 10px;
+	position: sticky;
+	top: 40px;
+	padding:0;*/
+}
+
+.displayFlex {
+	display: flex;
+	flex-direction:column;
+	align-content: flex-end;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.subInfo {
+	font-weight: bold;
+	text-align: center;
+	margin:10px;
+}
+
+#personDiv img {
+	position: relative;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+}

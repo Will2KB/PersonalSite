@@ -1,0 +1,7 @@
+<div class="topBottom" [ngClass]="{hideTopBottom : isHomePage}">
+	<ng-container *ngIf="personSummary as ps">
+		<div class="subInfo">{{ps.address!.show()}}</div>
+		<div class="subInfo">{{ps.tel}}</div>
+		<div class="subInfo">{{ps.mail}}</div>
+	</ng-container>
+</div>

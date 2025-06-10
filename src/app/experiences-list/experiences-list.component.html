@@ -1,0 +1,7 @@
+<div class="box glassBlock">
+	<h4>{{title}}</h4>
+
+	@for(exp of experiences; track exp.id){
+	<app-experience [experience]="exp" />
+	}
+</div>

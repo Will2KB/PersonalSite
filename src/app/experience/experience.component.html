@@ -1,0 +1,59 @@
+<div class="box">
+	<h5><span class="expName">{{this.experience.name}}</span> 
+		<span class="expDate">
+			
+			{{this.experience.dateBeginning}} 
+			@if(this.experience.dateBeginning && experience.dateEnding){
+				-
+			}
+			{{this.experience.dateEnding}}</span></h5>
+
+	<div class="etablissementLine">
+		<h6>
+			@if(experience?.establishment){
+				{{experience?.establishment?.name}}
+			}
+			
+			@if(experience?.establishment?.name && experience?.cityName){
+				,
+			}
+			
+			@if(experience?.cityName){
+				{{this.experience?.cityName}}
+			}
+
+			@if(experience?.countryName){
+				({{experience?.countryName}})
+			}
+
+
+		</h6>
+
+	</div>
+
+
+	@if(experience?.hasMission()){
+	<div><span class="underlineTitle"> Mission générale:</span> {{experience?.mission}}</div>
+	}
+	<div [ngStyle]="{display: this.experience.displayValue}">
+		@if(experience?.hasDescription){
+			coucou
+		<ul>
+			<!--@for(desc of experience?.details?.description; track desc.indexOf){
+			<li>{{desc}}</li>
+			}-->
+			{{experience?.details?.description}}
+		</ul>
+		}
+
+		@if(experience?.hasSkills){
+		<div><span class="underlineTitle">Compétences développées:</span>
+			{{experience?.details?.showSkills(SkillType.all)}}</div>
+		}
+	</div>
+
+	@if(experience?.hasMission() || experience?.hasDescription ||
+	experience?.hasSkills){
+	<button class="developButton" (click)="askMore()">{{experience?.developButton}}</button>
+	}
+</div>

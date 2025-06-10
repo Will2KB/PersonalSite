@@ -1,0 +1,38 @@
+<div class="body">
+	<div class="app-person">
+		<app-person [person]="this.person" [isHomePage]="this.isHomePage" />
+		@if(person?.hasLanguage()){
+		<app-langue [langues]="person.spokenLanguages" />
+		}
+	</div>
+	<div class="centralDiv">
+		<div class="title">
+			<h1>{{person?.summary?.title}}</h1>
+			<h3>{{person?.subtitle}}</h3>
+			<h3>{{person?.personalValues}}</h3>
+		</div>
+
+		@if(person?.hasKeyCompetences()){
+		<div class="box">
+			<h4>Compétences clés</h4>
+			<ul>
+				@for(keySkill of person?.keySkills; track keySkill.indexOf){
+				<li>{{keySkill}}</li>
+				}
+			</ul>
+		</div>
+		}
+
+		@if(person?.hasProExperiences()){
+		<app-experiences-list title="Expériences professionnelles" [experiences]="person.getProExperiences()" />
+		}
+
+		@if(person?.hasFormations()){
+		<app-experiences-list title="Formations" [experiences]="person.getFormations()" />
+		}
+
+		@if(person?.hasHobbies()){
+		<app-interest-centers [hobbies]="person.hobbies" />
+		}
+	</div>
+</div>

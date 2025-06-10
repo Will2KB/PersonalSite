@@ -1,0 +1,12 @@
+<div id="topDiv" class="topBottom" [ngClass]="{hideTopBottom : isHomePage}">
+	<div class="logo">
+		<a routerLink="home"><img src="/assets/WilliamBaroniTitle.png" /></a>
+	</div>
+	<div id="headerEndLine">
+		<div id="socialLinks">
+			<button (click)="openInNewPage(personSummary!.githubLink)"><img src="assets/logoGithub.png" /></button>
+			<button (click)="openInNewPage(personSummary!.linkedInLink)"><img src="assets/linkedin-blue-icon.webp" /></button>
+		</div>
+		<app-menu />
+	</div>
+</div>

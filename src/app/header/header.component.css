@@ -1,0 +1,36 @@
+#topDiv{
+	height:100px;	
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.logo img{
+	height:60px;
+	padding-left: 5px;	
+}
+
+.logo a:hover img{
+	padding-left: 10px;
+	transition: padding-left 1s;
+}
+
+#headerEndLine {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+#socialLinks img {
+	height: 20px;
+	margin: 5px;
+}
+
+#socialLinks button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}

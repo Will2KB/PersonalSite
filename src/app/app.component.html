@@ -1,0 +1,6 @@
+<app-header [isHomePage]="this.isHomePage" />
+
+	<!--<app-person [cv]="this.cv" [isHomePage]="this.isHomePage" />-->
+	<router-outlet (activate)="componentAdded($event)" />
+
+<app-bottom [isHomePage]="this.isHomePage" />

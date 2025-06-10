@@ -1,0 +1,18 @@
+<div id="mySidenav" class="sidenav" [ngClass]="{'active': this.isOpenMenu}">
+  <a id="closeBtn" class="close" (click)="this.closeMenu()">×</a>
+  <ul>
+  	<li><button (click)="navigateTo('presentation')">Qui suis-je?</button></li>
+    <li><button (click)="navigateTo('cv')">Parcours</button></li>
+   <!-- <li><button (click)="navigateTo('code')">Code</button></li>-->
+    <!--<li><button (click)="navigateTo('projets')">Projets</button></li>-->
+    <li><button (click)="navigateTo('contact')">Contact</button></li>
+  </ul>
+</div>
+
+<a id="openBtn" (click)="this.openMenu()">
+  <span class="burger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</a>

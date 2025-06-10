@@ -1,0 +1,54 @@
+.expName{
+	font-size: 16px;
+}
+
+.expDate{
+	float:inline-end;
+}
+
+.underlineTitle{
+	text-decoration: underline;
+}
+
+.developButton {
+  border: none;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--main-color);
+  transition: all 1000ms;
+  font-size: 10px;
+  position: relative;
+  overflow: hidden;
+  outline: 1px solid var(--main-color);
+  left:90%;
+}
+
+.developButton:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid var(--main-color);
+  box-shadow: 4px 5px 17px -4px rgb(0, 0, 0);
+}
+
+.developButton::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.developButton:hover::before {
+  width: 250%;
+}
+
+.etablissementLine{
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,8 @@
+<div id="personDiv" [ngClass]="{'hideTopBottom' : isHomePage, 'displayFlex, box' : !isHomePage}">
+	<!--<img [src]="this.person.img" />-->
+	<div class="subInfo">
+		<div>{{this.person?.summary?.title}}</div>
+		<div>{{this.person?.age}} ans, {{this.person?.showNationalities()}}</div>
+		<div>{{this.person?.subtitle}}</div>
+	</div>
+</div>

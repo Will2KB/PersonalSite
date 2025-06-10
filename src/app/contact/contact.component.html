@@ -1,0 +1,61 @@
+<div class="body">
+	<div>
+		<div id="titlePage" class="centralDiv box">
+			<span class="titleText">Contact</span>
+		</div>
+		<div class="centralDiv box glassBox">
+			<form [formGroup]="this.contactForm">
+				<table>
+					<tr>
+						<td>Nom</td>
+						<td><input type="text" name="name" formControlName="name"></td>
+					</tr>
+					<tr>
+						<td>Prénom </td>
+						<td><input type="text" name="firstname" formControlName="firstname"></td>
+					</tr>
+					<tr>
+						<td>Fonction </td>
+						<td><input type="text" name="fonction" formControlName="function"></td>
+					</tr>
+					<tr>
+						<td>Entreprise </td>
+						<td><input type="text" name="entreprise" formControlName="enterprise"></td>
+					</tr>
+					<tr>
+						<td>Téléphone </td>
+						<td><input type="tel" name="tel" formControlName="tel"></td>
+					</tr>
+					<tr>
+						<td>Mail </td>
+						<td><input type="email" name="email" formControlName="mail"></td>
+					</tr>
+					<tr>
+						<td>Message </td>
+						<td><textarea type="text" rows="5" name="message" formControlName="message"></textarea></td>
+					</tr>
+				</table>
+				<button type="submit" (click)="onSubmit()" [disabled]="contactForm.invalid">Envoyer</button>
+			</form>
+		</div>
+
+		<div id="contactMessage" class="centralDiv box glassBox" *ngIf="contactPreview$ | async as contactMessage">
+			<h3>Message</h3>
+			<table>
+				<tr>
+					<td>Envoyé par:</td>
+					<td>{{contactMessage.name}} {{contactMessage.firstname}}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>{{contactMessage.function}}, {{contactMessage.enterprise}}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>{{contactMessage.tel}} - {{contactMessage.mail}}</td>
+				</tr>
+			</table>
+			<p>{{contactMessage.message}}</p>
+		</div>
+	</div>
+</div>
