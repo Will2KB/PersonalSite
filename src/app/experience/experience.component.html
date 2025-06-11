@@ -1,12 +1,12 @@
 <div class="box">
-	<h5><span class="expName">{{this.experience.name}}</span> 
+	<h5><span class="expName">{{this.experience?.name}}</span> 
 		<span class="expDate">
 			
-			{{this.experience.dateBeginning}} 
-			@if(this.experience.dateBeginning && experience.dateEnding){
+			{{this.experience?.dateBeginning}} 
+			@if(this.experience?.dateBeginning && experience?.dateEnding){
 				-
 			}
-			{{this.experience.dateEnding}}</span></h5>
+			{{this.experience?.dateEnding}}</span></h5>
 
 	<div class="etablissementLine">
 		<h6>
@@ -35,14 +35,13 @@
 	@if(experience?.hasMission()){
 	<div><span class="underlineTitle"> Mission générale:</span> {{experience?.mission}}</div>
 	}
-	<div [ngStyle]="{display: this.experience.displayValue}">
+	<div [ngStyle]="{display: this.experience?.displayValue}">
 		@if(experience?.hasDescription){
 			coucou
 		<ul>
-			<!--@for(desc of experience?.details?.description; track desc.indexOf){
+			@for(desc of experience?.details?.descriptions; track desc.indexOf){
 			<li>{{desc}}</li>
-			}-->
-			{{experience?.details?.description}}
+			}
 		</ul>
 		}
 

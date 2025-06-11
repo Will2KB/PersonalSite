@@ -21,7 +21,7 @@ export class ExperienceComponent {
 
 	askMore(): void {
 		this.experience.setIsShow();
-
+		
 		if (this.experience.isShow && !this.experience.details) {
 			this.experienceService.getExperienceDetails(this.experience.id).subscribe(exp => {
 				this.experience.details = Experience.fromJson(exp);

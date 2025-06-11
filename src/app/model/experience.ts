@@ -7,7 +7,7 @@ export class Experience {
 
 	public establishment!: Establishment;
 	public city!: City;
-	public description!: string;
+	public descriptions!: string[];
 	public skills!: Skill[];
 
 	constructor() {
@@ -15,13 +15,11 @@ export class Experience {
 
 	public static fromJson(json:any):Experience{
 		const exp = new Experience();
-		exp.description = json.description;
+		exp.descriptions = json.descriptions;
 		exp.city = City.fromJson(json.city);	
 		exp.establishment = Establishment.fromJson(json.establishment);
 		exp.skills = (json.skills ?? []).filter((jsonSkill: any)=>jsonSkill.enable)
 								.map((jsonSkill :any) => Skill.fromJson(jsonSkill));
-								
-		console.log(exp);
 		return exp;
 	}
 

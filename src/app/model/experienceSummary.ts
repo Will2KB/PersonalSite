@@ -25,6 +25,7 @@ export class ExperienceSummary {
 	}
 
 	public static fromJson(json:any): ExperienceSummary{
+		console.log(json);
 		const exp = new ExperienceSummary(json.id, json.name, json.dateBeginning, json.dateEnding, json.cityName, json.countryName, json.mission,json.hasDescription, json.hasSkills, json.isFormation);
 		exp.establishment = Establishment.fromJson(json.establishment);
 		return exp;
