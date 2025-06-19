@@ -39,3 +39,7 @@
 #divPresentation{
 	justify-content: center;
 }
+
+.paragraphePresentation{
+	background: -webkit-linear-gradient(135deg, rgb(249, 212, 95,  rgb(251, 233, 189)));
+}

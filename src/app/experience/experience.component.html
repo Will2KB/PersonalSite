@@ -2,11 +2,11 @@
 	<h5><span class="expName">{{this.experience?.name}}</span> 
 		<span class="expDate">
 			
-			{{this.experience?.dateBeginning}} 
+			{{this.experience?.dateBeginning | date:'MMM yyyy'}} 
 			@if(this.experience?.dateBeginning && experience?.dateEnding){
 				-
 			}
-			{{this.experience?.dateEnding}}</span></h5>
+			{{this.experience?.dateEnding | date:'MMM yyyy'}}</span></h5>
 
 	<div class="etablissementLine">
 		<h6>
@@ -37,7 +37,6 @@
 	}
 	<div [ngStyle]="{display: this.experience?.displayValue}">
 		@if(experience?.hasDescription){
-			coucou
 		<ul>
 			@for(desc of experience?.details?.descriptions; track desc.indexOf){
 			<li>{{desc}}</li>

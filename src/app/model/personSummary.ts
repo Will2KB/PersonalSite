@@ -1,13 +1,13 @@
 import { Address } from "./address";
 
 export class PersonSummary {
-	public firstname!: string;
+	public firstName!: string;
 	public name!: string;
 	public title!: string;
 	public mail!: string;
 	public tel!: string;
 	public address!: Address;
-	public githubLink!: string;
+	public gitHubLink!: string;
 	public linkedInLink!: string;
 
 	constructor() {

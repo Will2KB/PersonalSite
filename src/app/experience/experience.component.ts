@@ -1,14 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Experience } from '../model/experience';
 import { ExperienceSummary } from '../model/experienceSummary';
-import { NgStyle } from '@angular/common';
+import { NgStyle, CommonModule } from '@angular/common';
 import { SkillType } from '../model/skillType';
 import { ExperienceService } from '../services/ExperienceService';
 
 @Component({
 	selector: 'app-experience',
 	standalone: true,
-	imports: [NgStyle],
+	imports: [NgStyle, CommonModule],
 	templateUrl: './experience.component.html',
 	styleUrl: './experience.component.css'
 })

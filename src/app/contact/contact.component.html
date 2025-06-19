@@ -16,7 +16,7 @@
 					</tr>
 					<tr>
 						<td>Fonction </td>
-						<td><input type="text" name="fonction" formControlName="function"></td>
+						<td><input type="text" name="function" formControlName="function"></td>
 					</tr>
 					<tr>
 						<td>Entreprise </td>
@@ -28,14 +28,16 @@
 					</tr>
 					<tr>
 						<td>Mail </td>
-						<td><input type="email" name="email" formControlName="mail"></td>
+						<td><input type="email" name="mailFrom" formControlName="mailFrom"></td>
 					</tr>
 					<tr>
 						<td>Message </td>
-						<td><textarea type="text" rows="5" name="message" formControlName="message"></textarea></td>
+						<td><textarea type="text" rows="5" name="body" formControlName="body"></textarea></td>
 					</tr>
 				</table>
-				<button type="submit" (click)="onSubmit()" [disabled]="contactForm.invalid">Envoyer</button>
+				
+				 <button type="submit" (click)="onSubmit()" 				[disabled]="contactForm.invalid || isSubmitting">
+				      {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer' }}</button>
 			</form>
 		</div>
 
@@ -52,10 +54,10 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td>{{contactMessage.tel}} - {{contactMessage.mail}}</td>
+					<td>{{contactMessage.tel}} - {{contactMessage.mailFrom}}</td>
 				</tr>
 			</table>
-			<p>{{contactMessage.message}}</p>
+			<p>{{contactMessage.body}}</p>
 		</div>
 	</div>
 </div>

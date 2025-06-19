@@ -5,10 +5,11 @@ export class Contact {
 	public function!: string;
 	public enterprise!: string;
 	public tel!: string;
-	public mail!: string;
-	public message!: string;
+	public mailFrom!: string;
+	public body!: string;
+	public subject!:string;
 	
 	sendMail(){
-		console.log("Send mail to " + this.mail);
+		console.log("Send mail to " + this.mailFrom);
 	}
 }

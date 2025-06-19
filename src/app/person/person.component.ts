@@ -12,4 +12,8 @@ import { NgClass } from '@angular/common';
 export class PersonComponent {
 	@Input() isHomePage! :boolean;
 	@Input() person!:Person;
+	
+	public getImgUrl():String{
+		return "/assets/" + this.person?.summary?.name + this.person?.summary?.firstName + ".jpg";
+	} 
 }
